@@ -32,6 +32,10 @@ class Human:
 human1 = Human(18)
 human2 = Human(17)
 
+"""console answers
+Human likes drink beer
+Human likes drink juice"""
+
 
 class Worker(Human):
     """2. Перевизначити в класі Worker улюблений напій таким чином,
@@ -54,3 +58,9 @@ class Worker(Human):
 worker1 = Worker(17, 1000)
 worker2 = Worker(23, 1200)
 worker3 = Worker(22, 1000)
+
+
+"""console answers
+Human likes drink juice
+Human likes drink whiskey
+Human likes drink beer"""
