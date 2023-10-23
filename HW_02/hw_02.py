@@ -21,21 +21,15 @@ class Human:
         self.age = human_age
         if human_age < 18:
             self.favorite_drink = 'juice'
-            print('Human likes drink ' + self.favorite_drink)
-        else:
-            print('Human likes drink ' + self.favorite_drink)
 
     def drink(self):
-        print(self.favorite_drink)
+        print(self.__class__.__name__ + ' likes drink ' + self.favorite_drink)
 
 
 human1 = Human(18)
 human2 = Human(17)
-
-"""console answers
-Human likes drink beer
-Human likes drink juice"""
-
+human1.drink()
+human2.drink()
 
 class Worker(Human):
     """2. Перевизначити в класі Worker улюблений напій таким чином,
@@ -43,24 +37,15 @@ class Worker(Human):
 Вивести в консоль все так само як в першому завданні, але з урахуванням зарплати."""
 
     def __init__(self, human_age, worker_salary):
-        self.age = human_age
+        super().__init__(human_age)
         self.salary = worker_salary
-        if human_age < 18:
-            self.favorite_drink = 'juice'
-            print('Human likes drink ' + self.favorite_drink)
-        elif worker_salary > 1000:
+        if worker_salary > 1000:
             self.favorite_drink = 'whiskey'
-            print('Human likes drink ' + self.favorite_drink)
-        else:
-            print('Human likes drink ' + self.favorite_drink)
 
 
 worker1 = Worker(17, 1000)
 worker2 = Worker(23, 1200)
 worker3 = Worker(22, 1000)
-
-
-"""console answers
-Human likes drink juice
-Human likes drink whiskey
-Human likes drink beer"""
+worker1.drink()
+worker2.drink()
+worker3.drink()
