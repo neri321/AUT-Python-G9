@@ -12,6 +12,18 @@ Preconditions:
 
 cities = ['Львів', 'Київ', 'Одеса', 'Дніпро', 'Суми', 'Харків', 'Донецьк', 'Полтава', 'Чернівці', 'Ужгород']
 visited_cities = ['Львів', 'Київ', 'Одеса', 'Харків', 'Полтава']
+
+
+def visited_ct():
+    return ['Львів', 'Київ', 'Одеса', 'Харків', 'Полтава']
+
+
+ct = visited_ct()
+
+while ct:
+    city = ct.pop(0)
+    print(city)
+
 not_visited_cities = [city for city in cities if city not in visited_cities]
 
 print(not_visited_cities)
@@ -43,7 +55,6 @@ Preconditions:
     щоб всі голосні літери стали великими"""
 # the first try
 doc = 'мені дуже подобається вивчати пайтон! здається, це найлегша з потужних мов для вивчення.'
-
 
 # def upper_vowels(text: str):
 #     vowels_letter = 'аоиіуєеяюї'
