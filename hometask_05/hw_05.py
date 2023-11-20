@@ -87,11 +87,11 @@ def func_3(num):
     try:
         check_digit(num)
     except OnlyEvenError:
-        print(num + 1)
+        return num + 1
     else:
-        print(num * 2)
+        return num * 2
     finally:
         print('Я все одно завжди щось друкую')
 
 
-func_3(4)
+print(func_3(4))
