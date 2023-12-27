@@ -6,7 +6,7 @@ from hometask_10_date_pickers.pages.page_date_picker import PageDatePicker
 class TestDatePicker:
 
     def test_select_date(self, chrome):
-        target_date = "9/19/2019"
+        target_date = "8/19/2019"
         # target_date = 'August/19/2025'
         page = PageDatePicker(driver=chrome)
         page.open()
